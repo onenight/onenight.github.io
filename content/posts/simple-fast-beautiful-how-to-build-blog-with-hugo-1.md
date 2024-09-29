@@ -21,17 +21,17 @@ cover:
 
 Hugo 是用 Go 做的一個靜態網站生成器，它方便編輯且介面簡潔，發布也非常迅速。 你可以在筆電 (本地端) 任意創作並隨時預覽成果。
 
-[Markdown](https://hackmd.io/@eMP9zQQ0Qt6I8Uqp2Vqy6w/SyiOheL5N/%2FBVqowKshRH246Q7UDyodFA?type=book)是它主要撰寫文章的格式。 如果你沒接觸過，可以點連結看介紹，我通常是用到才查。
+[Markdown](https://hackmd.io/@eMP9zQQ0Qt6I8Uqp2Vqy6w/SyiOheL5N/%2FBVqowKshRH246Q7UDyodFA?type=book)是它主要撰寫文章的格式。 如果你沒接觸過，可以點連結看介紹，它不難背，但我也沒背過就是，通常是用到才查。
 
 你想加強個人品牌或風格，Hugo 社群亦有豐富的[佈景主題](https://themes.gohugo.io/)。看不慣你也可以自己改，寫一些程式碼即可。
 
-# 安裝 Hugo 到 Mac
+# 快速安裝 Hugo 到 Mac
 
 安裝步驟真的非常簡單，只需下幾個指令就可完成。 安裝過程會用到 [brew](https://brew.sh/) 和 [git](https://github.com/)，沒用過它們的話，建議先去安裝和申請帳號。
 
 ## 1. 下載 Hugo
 
-開啟你的 `terminal`，並輸入以下指令
+開啟你的 `terminal` 終端機，並輸入以下指令
 
 ```
 brew install hugo
@@ -39,23 +39,41 @@ brew install hugo
 
 ## 2. 建立新 Blog
 
-安裝完成後，我們立即可以使用下方指令建立一個新的 blog。`--format yaml` 不是必要條件，它的作用僅是把設定檔改成 `yaml` 格式
+完成後，我們可以用下方指令建立一個新的 blog。
 
 ```
 hugo new site blog --format yaml
 ```
 
-成功執行後，你會得到一個 `blog` 的資料夾。 接著請進入資料夾
+你會得到一個 `blog` 資料夾。 接著請進入
 
 ```
 cd blog
+```
+
+然後請先 `init repo`，我們需要它來記錄和部署
+
+```
+git init
+```
+
+接著新增 `.gitignore` 的檔案到資料夾裡，並填入我們想忽略的檔案
+
+```
+# Hugo build lock file
+.hugo_build.lock
+
+# Hugo generated files and directories
+/public/
 ```
 
 ## 3. 下載佈景主題
 
 ![Hugo Themes](/images/hugo_themes.png)
 
-從[佈景主題](https://themes.gohugo.io/)裡面挑選你中意的主題，點進去主題裡，找到下載指令並輸入。 下載方式有好幾種，但我覺得直接用`submodule`即可，例如我選 **PaperMod**，它指令長這樣。下載成功後，你會發現 themes 資料夾底下跑出主題的名字
+從[佈景主題](https://themes.gohugo.io/)裡面挑選你中意的主題，進一步瀏覽都可以看到下載指令。 我建議直接選有`submodule`的指令。下載成功後，你會發現 themes 資料夾跑出你的主題。
+
+**PaperMod** 下載指令
 
 ```
 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
@@ -79,7 +97,7 @@ hugo new posts/你的文章標題.md
 
 ```
 
-輸入後，它會在 `content` 的資料夾產生 `posts/你的文章標題.md` 文章。 大概長這樣
+它會在 `content` 的資料夾產生 `posts/你的文章標題.md` 文章。 草稿大概長這樣
 
 ```
 ---
