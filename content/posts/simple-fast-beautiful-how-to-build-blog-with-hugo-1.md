@@ -1,0 +1,106 @@
+---
+title: "簡單、快速、美觀：如何用 Hugo 打造專屬部落格 (一)：撰寫你的第一篇文章"
+date: 2024-09-28T00:27:05+08:00
+draft: true
+cover:
+  image: "images/hugo_blog_image.png"
+  alt: "Hugo Blog"
+  caption: "The world’s fastest framework for building websites" #
+---
+
+# 為什麼選 Hugo？
+
+市面上各種部落格琳瑯滿目，例如 Wordpress、Medium、Blogger、方格子、痞客邦等等。 我選擇 [Hugo](https://gohugo.io/) 作為架站工具的原因有幾點：
+
+- 完全免費
+- 編輯簡單快速
+- 100% 不受站方管制
+- 佈景主題不錯看
+
+# Hugo 是什麼？
+
+Hugo 是用 Go 做的一個靜態網站生成器，它方便編輯且介面簡潔，發布也非常迅速。 你可以在筆電 (本地端) 任意創作並隨時預覽成果。
+
+[Markdown](https://hackmd.io/@eMP9zQQ0Qt6I8Uqp2Vqy6w/SyiOheL5N/%2FBVqowKshRH246Q7UDyodFA?type=book)是它主要撰寫文章的格式。 如果你沒接觸過，可以點連結看介紹，我通常是用到才查。
+
+你想加強個人品牌或風格，Hugo 社群亦有豐富的[佈景主題](https://themes.gohugo.io/)。看不慣你也可以自己改，寫一些程式碼即可。
+
+# 安裝 Hugo 到 Mac
+
+安裝步驟真的非常簡單，只需下幾個指令就可完成。 安裝過程會用到 [brew](https://brew.sh/) 和 [git](https://github.com/)，沒用過它們的話，建議先去安裝和申請帳號。
+
+## 1. 下載 Hugo
+
+開啟你的 `terminal`，並輸入以下指令
+
+```
+brew install hugo
+```
+
+## 2. 建立新 Blog
+
+安裝完成後，我們立即可以使用下方指令建立一個新的 blog。`--format yaml` 不是必要條件，它的作用僅是把設定檔改成 `yaml` 格式
+
+```
+hugo new site blog --format yaml
+```
+
+成功執行後，你會得到一個 `blog` 的資料夾。 接著請進入資料夾
+
+```
+cd blog
+```
+
+## 3. 下載佈景主題
+
+![Hugo Themes](/images/hugo_themes.png)
+
+從[佈景主題](https://themes.gohugo.io/)裡面挑選你中意的主題，點進去主題裡，找到下載指令並輸入。 下載方式有好幾種，但我覺得直接用`submodule`即可，例如我選 **PaperMod**，它指令長這樣。下載成功後，你會發現 themes 資料夾底下跑出主題的名字
+
+```
+git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+```
+
+接著找到 `hugo.yaml` 檔案，設定主題
+
+```
+baseURL: https://example.org/
+languageCode: en-us
+title: Your Blog Name
+theme: PaperMod
+```
+
+# 產生第一篇文章
+
+產生文章的指令很簡單，請參考以下格式：
+
+```
+hugo new posts/你的文章標題.md
+
+```
+
+輸入後，它會在 `content` 的資料夾產生 `posts/你的文章標題.md` 文章。 大概長這樣
+
+```
+---
+title: '簡單、快速、美觀：如何用 Hugo 打造專屬部落格 (一)：撰寫你的第一篇文章'
+date: 2024-09-28T00:27:05+08:00
+draft: true
+---
+```
+
+接著請再輸入以下指令，讓我們把 hugo 跑起來。
+
+```
+hugo server -D
+```
+
+成功跑起來的話，你會看到在訊息中看到 `http://localhost:1313/` 的預覽網址。 請在瀏覽器輸入網址，便可以獲得一個即時預覽的部落格 (本地端)。 你修改存檔的內容，它立即重新編譯並顯示。
+
+![預覽部落格](/images/preview_blog.png)
+
+# 小結
+
+在本篇文章中，我們介紹了如何用 Hugo 安裝並啟動一個基本的部落格網站，也介紹如何設定佈景主題，以及建立文章。
+
+在接下來的文章中，我們將進一步了解如何發布你的第一篇部落格文章，讓我們繼續探索吧！

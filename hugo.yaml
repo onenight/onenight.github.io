@@ -1,0 +1,15 @@
+baseURL: https://example.org/
+languageCode: zh-TW
+title: BC
+theme: PaperMod
+
+params:
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/bc-lee/"
+    - name: github
+      url: "https://github.com/onenight"
