@@ -1,7 +1,7 @@
 ---
 title: "簡單、快速、美觀：如何用 Hugo 打造專屬部落格 (一)：撰寫你的第一篇文章"
 date: 2024-09-28T00:27:05+08:00
-draft: true
+draft: false
 cover:
   image: "images/hugo_blog_image.png"
   alt: "Hugo Blog"
