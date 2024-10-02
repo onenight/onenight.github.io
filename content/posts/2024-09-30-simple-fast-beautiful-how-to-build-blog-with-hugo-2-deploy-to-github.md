@@ -3,7 +3,7 @@ title: "簡單、快速、美觀：如何用 Hugo 打造專屬部落格 (二)：
 date: 2024-09-30T21:46:07+08:00
 draft: false
 tags: ["Github", "部署", "部落格", "Hugo", "快速上手"]
-category: ["技術工具"]
+categories: ["技術工具"]
 cover:
   image: "images/github_pages.png"
   alt: "Github Pages"

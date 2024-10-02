@@ -3,7 +3,7 @@ title: "簡單、快速、美觀：如何用 Hugo 打造專屬部落格 (一)：
 date: 2024-09-28T00:27:05+08:00
 draft: false
 tags: ["佈景主題", "快速上手", "部落格", "Hugo", "Go"]
-category: ["技術工具"]
+categories: ["技術工具"]
 cover:
   image: "images/hugo_blog_image.jpg"
   alt: "Hugo Blog"
