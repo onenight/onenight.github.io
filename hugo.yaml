@@ -3,7 +3,16 @@ languageCode: zh-TW
 title: BC
 theme: PaperMod
 
+enableRobotsTXT: true
+
 params:
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowWordCount: true
+  showtoc: true
+  tocopen: true
+
   homeInfoParams:
     Title: "Hi there \U0001F44B"
     Content: Welcome to my blog
@@ -22,3 +31,14 @@ params:
     favicon32x32: "images/favicon.svg"
     apple_touch_icon: "images/favicon.svg"
     safari_pinned_tab: "images/favicon.svg"
+
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
